@@ -1,8 +1,8 @@
-import CheckSession from './src/CheckAuth';
+import CheckAuth from './src/CheckAuth';
 import CheckRequestBody from './src/CheckRequestBody';
 
 const Middlewares = {
-  CheckSession,
+  CheckAuth,
   CheckRequestBody,
 };
 

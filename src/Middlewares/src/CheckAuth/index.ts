@@ -1,9 +1,7 @@
 import Api from './src/Api.middleware';
-import WebSocket from './src/WebSocket.middleware';
 
-const CheckSession = {
+const CheckAuth = {
   Api,
-  WebSocket,
 };
 
-export default CheckSession;
+export default CheckAuth;

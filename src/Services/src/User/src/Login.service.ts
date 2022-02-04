@@ -37,7 +37,7 @@ const Login = async (props: ILoginInputProps) => {
   if (!findedUser) {
     result.error = {
       statusCode: 401,
-      content: 'Username or password invalid.',
+      content: 'Username or password is invalid.',
     };
 
     return result;
@@ -53,7 +53,7 @@ const Login = async (props: ILoginInputProps) => {
   if (!checkPassword.isValid) {
     result.error = {
       statusCode: 401,
-      content: 'Username or password invalid.',
+      content: 'Username or password is invalid.',
     };
 
     return result;

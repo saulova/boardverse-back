@@ -2,7 +2,7 @@
 import Joi, { ValidationError } from 'joi';
 
 // types
-import { ISignUpInputProps } from '@src-path/Interfaces/Services/User/SignUp.service.types';
+import { ISignUpInputProps } from '@src-path/Interfaces/SignUp.interface';
 
 const SignUp = async (props: ISignUpInputProps): Promise<ISignUpInputProps> => {
   // Create result
