@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  postgres-db:
+    image: postgres:alpine
+    container_name: postgres-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      TZ: America/Sao_Paulo
+      POSTGRES_PASSWORD: your-db-password
+      POSTGRES_DB: boardverse
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+

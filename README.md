@@ -102,11 +102,26 @@ yarn install
 
 </li><li>
 
-Now you have two options
+Use docker compose to create PostgreSQL and Adminer containers
 
-<ol><li>
+Edit <b>docker/docker-compose.yml</b> with your data and run
 
-Run as Developer (recommended at this moment).
+```sh
+cd docker
+docker-compose up -d
+cd ../
+```
+
+</li><li>
+Run Prisma migration
+
+```sh
+npx prisma migrate dev
+```
+
+</li><li>
+
+Run as Developer (recommended at this moment)
 
 With NPM
 
@@ -120,43 +135,7 @@ With Yarn
 yarn dev
 ```
 
-</li><li>
-  
-Run in Production Mode
-  
-<ol><li>
-
-Build Back-End
-
-With NPM
-
-```sh
-npm run build
-```
-
-With Yarn
-
-```sh
-yarn build
-```
-
-</li><li>
-Start Back-End
-
-With NPM
-
-```sh
-npm run start
-```
-
-With Yarn
-
-```sh
-yarn start
-```
-
 </li></ol>
-</li></ol></ol>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
